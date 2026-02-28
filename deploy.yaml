@@ -54,6 +54,7 @@
         path: /etc/hosts
         line: "192.168.133.189 monsite.com www.monsite.com"
         state: present
+      tags: docker
 
     - name: Creer dossier principal
       file:
@@ -130,4 +131,45 @@
       command: docker compose up -d
       args:
         chdir: /evaluation2_ansible
+      tags: Lancer docker compose
+
+    - name: Installer rsyslog
+      ansible.builtin.package:
+        name: rsyslog
+        state: present
+      tags: rsyslog
+
+    - name: Assurer que rsyslog est en service
+      ansible.builtin.systemd:
+        name: rsyslog
+        state: started
+        enabled: true
+      tags:  rsyslog
+
+    - name: Ajouter une règle personnalisée pour rsyslog
+      ansible.builtin.lineinfile:
+        path: /etc/rsyslog.d/50-default.conf
+        line: "*.* /var/log/docker_tasks.log"
+        create: yes
+        state: present
+      notify:
+        - Restart rsyslog
+      tags: rsyslog
+
+    - name: Lire les logs syslog
+      command: tail -n 20 /var/log/syslog
+      register: syslog_output
+      tags: logs
+
+    - name: Afficher les logs syslog
+      debug:
+        var: syslog_output.stdout
+      tags: logs
+
+    - name: Récupérer le fichier syslog complet
+      fetch:
+        src: /var/log/syslog
+        dest: ./logs/{{ inventory_hostname }}/
+        flat: yes
+      tags: logs
 
