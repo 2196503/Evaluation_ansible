@@ -4,15 +4,14 @@ all:
   vars:
     ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 
-# hosts:
- #  control:
-  #   ansible_connection: local
+hosts:
+  control:
+    ansible_connection: local
 
 prod:
   hosts:
-    srv-web-01:
-      ansible_host: 192.168.133.189 # A remplacer par l'IP de votre client
-       #ansible_user: deploy
-      ansible_ssh_private_key_file: ~/.ssh/id_ed25519
-      ansible_python_interpreter: /usr/bin/python3.12
-       #ansible_become_password: ubuntusd
+   srv-web-01:
+     ansible_host: 192.168.133.189 # A remplacer par l'IP de votre client
+     ansible_ssh_private_key_file: ~/.ssh/id_ed25519
+     ansible_python_interpreter: /usr/bin/python3.12
+

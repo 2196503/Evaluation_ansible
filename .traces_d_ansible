@@ -4183,3 +4183,440 @@ Origin: /home/deploy/codes/ansible/evaluation2_ansible/vars/secret-variables.yam
 2026-02-28 00:34:42,491 p=22010 u=deploy n=ansible INFO| changed: [srv-web-01]
 2026-02-28 00:34:42,511 p=22010 u=deploy n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************************************************************
 2026-02-28 00:34:42,513 p=22010 u=deploy n=ansible INFO| srv-web-01                 : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-28 02:23:04,009 p=23673 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *******************************************************************************************************************************************************************
+2026-02-28 02:23:04,046 p=23673 u=deploy n=ansible INFO| TASK [Gathering Facts] *********************************************************************************************************************************************************************************
+2026-02-28 02:23:10,417 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:23:10,450 p=23673 u=deploy n=ansible INFO| TASK [INSTALL DEPENDANCES DOCKER] **********************************************************************************************************************************************************************
+2026-02-28 02:23:22,174 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:23:22,216 p=23673 u=deploy n=ansible INFO| TASK [AJOUT CLE GPG DE DOCKER] *************************************************************************************************************************************************************************
+2026-02-28 02:23:27,784 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:23:27,821 p=23673 u=deploy n=ansible INFO| TASK [AJOUT DEPOT APT DE DOCKER] ***********************************************************************************************************************************************************************
+2026-02-28 02:23:31,430 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:23:31,466 p=23673 u=deploy n=ansible INFO| TASK [INSTALL DOCKER] **********************************************************************************************************************************************************************************
+2026-02-28 02:23:42,244 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:23:42,281 p=23673 u=deploy n=ansible INFO| TASK [INSTALL DOCKER COMPOSE V2] ***********************************************************************************************************************************************************************
+2026-02-28 02:23:47,405 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:23:47,428 p=23673 u=deploy n=ansible INFO| TASK [DEMARRE DOCKER] **********************************************************************************************************************************************************************************
+2026-02-28 02:23:52,144 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:23:52,167 p=23673 u=deploy n=ansible INFO| TASK [Ajouter domaine dans /etc/hosts] *****************************************************************************************************************************************************************
+2026-02-28 02:23:55,200 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:23:55,223 p=23673 u=deploy n=ansible INFO| TASK [Creer dossier principal] *************************************************************************************************************************************************************************
+2026-02-28 02:23:58,407 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:23:58,431 p=23673 u=deploy n=ansible INFO| TASK [Creer dossier php] *******************************************************************************************************************************************************************************
+2026-02-28 02:24:01,122 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:01,149 p=23673 u=deploy n=ansible INFO| TASK [Creer dossier monsite] ***************************************************************************************************************************************************************************
+2026-02-28 02:24:03,876 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:03,894 p=23673 u=deploy n=ansible INFO| TASK [Creer dossier html] ******************************************************************************************************************************************************************************
+2026-02-28 02:24:06,420 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:06,444 p=23673 u=deploy n=ansible INFO| TASK [Creer dossier conf] ******************************************************************************************************************************************************************************
+2026-02-28 02:24:09,219 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:09,260 p=23673 u=deploy n=ansible INFO| TASK [Copier le fichier docker-compose.yml] ************************************************************************************************************************************************************
+2026-02-28 02:24:14,566 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:14,591 p=23673 u=deploy n=ansible INFO| TASK [Copier le fichier default.conf] ******************************************************************************************************************************************************************
+2026-02-28 02:24:18,982 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:19,012 p=23673 u=deploy n=ansible INFO| TASK [Copier le fichier index.php] *********************************************************************************************************************************************************************
+2026-02-28 02:24:23,675 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:23,707 p=23673 u=deploy n=ansible INFO| TASK [Copier le fichier Dockerfile] ********************************************************************************************************************************************************************
+2026-02-28 02:24:28,596 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:28,620 p=23673 u=deploy n=ansible INFO| TASK [Lancer les conteneurs Docker] ********************************************************************************************************************************************************************
+2026-02-28 02:24:48,950 p=23673 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 02:24:49,077 p=23673 u=deploy n=ansible INFO| TASK [Installer rsyslog] *******************************************************************************************************************************************************************************
+2026-02-28 02:24:54,136 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:54,172 p=23673 u=deploy n=ansible INFO| TASK [Assurer que rsyslog est en service] **************************************************************************************************************************************************************
+2026-02-28 02:24:58,288 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:24:58,330 p=23673 u=deploy n=ansible INFO| TASK [Ajouter une règle personnalisée pour rsyslog] ****************************************************************************************************************************************************
+2026-02-28 02:25:00,908 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 02:25:00,933 p=23673 u=deploy n=ansible INFO| TASK [Lire les logs syslog] ****************************************************************************************************************************************************************************
+2026-02-28 02:25:03,615 p=23673 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 02:25:03,642 p=23673 u=deploy n=ansible INFO| TASK [Afficher les logs syslog] ************************************************************************************************************************************************************************
+2026-02-28 02:25:03,823 p=23673 u=deploy n=ansible INFO| ok: [srv-web-01] => {
+    "syslog_output.stdout": "2026-03-01T22:12:06.478915+00:00 srv-web-01 kernel: br-5575208339f4: port 3(veth5d848bc) entered forwarding state\n2026-03-01T22:12:06.492339+00:00 srv-web-01 systemd-networkd[511]: veth5d848bc: Gained carrier\n2026-03-01T22:12:06.635433+00:00 srv-web-01 dockerd[910]: time=\"2026-03-01T22:12:06.629198388Z\" level=info msg=\"sbJoin: gwep4 ''->'bd8fdeb2985d', gwep6 ''->''\" eid=bd8fdeb2985d ep=evaluation2_ansible-nginx-1 net=evaluation2_ansible_backend nid=5575208339f4 spanID=6f441924261ec38f traceID=16d9fabcb87b369e057a81bb788be383\n2026-03-01T22:12:10.521973+00:00 srv-web-01 systemd-networkd[511]: veth5d848bc: Gained IPv6LL\n2026-03-01T22:12:10.535338+00:00 srv-web-01 kernel: br-d1301332effd: port 1(veth5cab2e0) entered blocking state\n2026-03-01T22:12:10.535424+00:00 srv-web-01 kernel: br-d1301332effd: port 1(veth5cab2e0) entered disabled state\n2026-03-01T22:12:10.535442+00:00 srv-web-01 kernel: veth5cab2e0: entered allmulticast mode\n2026-03-01T22:12:10.535460+00:00 srv-web-01 kernel: veth5cab2e0: entered promiscuous mode\n2026-03-01T22:12:10.610353+00:00 srv-web-01 systemd-networkd[511]: veth5cab2e0: Link UP\n2026-03-01T22:12:10.627828+00:00 srv-web-01 kernel: eth1: renamed from veth34a636f\n2026-03-01T22:12:10.662541+00:00 srv-web-01 kernel: br-d1301332effd: port 1(veth5cab2e0) entered blocking state\n2026-03-01T22:12:10.662619+00:00 srv-web-01 kernel: br-d1301332effd: port 1(veth5cab2e0) entered forwarding state\n2026-03-01T22:12:10.662021+00:00 srv-web-01 systemd-networkd[511]: veth5cab2e0: Gained carrier\n2026-03-01T22:12:10.670152+00:00 srv-web-01 systemd-networkd[511]: br-d1301332effd: Gained carrier\n2026-03-01T22:12:10.704606+00:00 srv-web-01 dockerd[910]: time=\"2026-03-01T22:12:10.700939744Z\" level=info msg=\"sbJoin: gwep4 'bd8fdeb2985d'->'bd8fdeb2985d', gwep6 ''->''\" eid=272468fc7529 ep=evaluation2_ansible-nginx-1 net=evaluation2_ansible_frontend nid=d1301332effd spanID=6f441924261ec38f traceID=16d9fabcb87b369e057a81bb788be383\n2026-03-01T22:12:12.168215+00:00 srv-web-01 systemd-networkd[511]: veth5cab2e0: Gained IPv6LL\n2026-03-01T22:12:13.918153+00:00 srv-web-01 python3.12[32377]: ansible-ansible.legacy.apt Invoked with name=rsyslog state=present package=['rsyslog'] update_cache_retries=5 update_cache_retry_max_delay=12 cache_valid_time=0 purge=False force=False upgrade=no dpkg_options=force-confdef,force-confold autoremove=False autoclean=False fail_on_autoremove=False only_upgrade=False force_apt_get=False clean=False allow_unauthenticated=False allow_downgrade=False allow_change_held_packages=False lock_timeout=60 auto_install_module_deps=True update_cache=None deb=None default_release=None install_recommends=None policy_rc_d=None\n2026-03-01T22:12:19.488354+00:00 srv-web-01 python3.12[32423]: ansible-ansible.builtin.systemd Invoked with enabled=True name=rsyslog state=started daemon_reload=False daemon_reexec=False scope=system no_block=False force=None masked=None\n2026-03-01T22:12:22.175897+00:00 srv-web-01 python3.12[32449]: ansible-ansible.builtin.lineinfile Invoked with create=True line=*.* /var/log/docker_tasks.log path=/etc/rsyslog.d/50-default.conf state=present backrefs=False backup=False firstmatch=False unsafe_writes=False regexp=None search_string=None insertafter=None insertbefore=None validate=None mode=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-01T22:12:24.641008+00:00 srv-web-01 python3.12[32472]: ansible-ansible.legacy.command Invoked with _raw_params=tail -n 20 /var/log/syslog _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None chdir=None executable=None creates=None removes=None stdin=None"
+}
+2026-02-28 02:25:03,851 p=23673 u=deploy n=ansible INFO| TASK [Récupérer le fichier syslog complet] *************************************************************************************************************************************************************
+2026-02-28 02:25:07,004 p=23673 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 02:25:07,023 p=23673 u=deploy n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************************************************************
+2026-02-28 02:25:07,025 p=23673 u=deploy n=ansible INFO| srv-web-01                 : ok=24   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-28 03:41:02,547 p=24942 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *******************************************************************************************************************************************************************
+2026-02-28 03:41:02,590 p=24942 u=deploy n=ansible INFO| TASK [Gathering Facts] *********************************************************************************************************************************************************************************
+2026-02-28 03:41:13,244 p=24942 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 03:41:13,280 p=24942 u=deploy n=ansible INFO| TASK [Lire les logs syslog] ****************************************************************************************************************************************************************************
+2026-02-28 03:41:17,159 p=24942 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 03:41:17,219 p=24942 u=deploy n=ansible INFO| TASK [Afficher les logs syslog] ************************************************************************************************************************************************************************
+2026-02-28 03:41:17,490 p=24942 u=deploy n=ansible INFO| ok: [srv-web-01] => {
+    "syslog_output.stdout": "2026-03-01T22:12:10.662541+00:00 srv-web-01 kernel: br-d1301332effd: port 1(veth5cab2e0) entered blocking state\n2026-03-01T22:12:10.662619+00:00 srv-web-01 kernel: br-d1301332effd: port 1(veth5cab2e0) entered forwarding state\n2026-03-01T22:12:10.662021+00:00 srv-web-01 systemd-networkd[511]: veth5cab2e0: Gained carrier\n2026-03-01T22:12:10.670152+00:00 srv-web-01 systemd-networkd[511]: br-d1301332effd: Gained carrier\n2026-03-01T22:12:10.704606+00:00 srv-web-01 dockerd[910]: time=\"2026-03-01T22:12:10.700939744Z\" level=info msg=\"sbJoin: gwep4 'bd8fdeb2985d'->'bd8fdeb2985d', gwep6 ''->''\" eid=272468fc7529 ep=evaluation2_ansible-nginx-1 net=evaluation2_ansible_frontend nid=d1301332effd spanID=6f441924261ec38f traceID=16d9fabcb87b369e057a81bb788be383\n2026-03-01T22:12:12.168215+00:00 srv-web-01 systemd-networkd[511]: veth5cab2e0: Gained IPv6LL\n2026-03-01T22:12:13.918153+00:00 srv-web-01 python3.12[32377]: ansible-ansible.legacy.apt Invoked with name=rsyslog state=present package=['rsyslog'] update_cache_retries=5 update_cache_retry_max_delay=12 cache_valid_time=0 purge=False force=False upgrade=no dpkg_options=force-confdef,force-confold autoremove=False autoclean=False fail_on_autoremove=False only_upgrade=False force_apt_get=False clean=False allow_unauthenticated=False allow_downgrade=False allow_change_held_packages=False lock_timeout=60 auto_install_module_deps=True update_cache=None deb=None default_release=None install_recommends=None policy_rc_d=None\n2026-03-01T22:12:19.488354+00:00 srv-web-01 python3.12[32423]: ansible-ansible.builtin.systemd Invoked with enabled=True name=rsyslog state=started daemon_reload=False daemon_reexec=False scope=system no_block=False force=None masked=None\n2026-03-01T22:12:22.175897+00:00 srv-web-01 python3.12[32449]: ansible-ansible.builtin.lineinfile Invoked with create=True line=*.* /var/log/docker_tasks.log path=/etc/rsyslog.d/50-default.conf state=present backrefs=False backup=False firstmatch=False unsafe_writes=False regexp=None search_string=None insertafter=None insertbefore=None validate=None mode=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-01T22:12:24.641008+00:00 srv-web-01 python3.12[32472]: ansible-ansible.legacy.command Invoked with _raw_params=tail -n 20 /var/log/syslog _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None chdir=None executable=None creates=None removes=None stdin=None\n2026-03-01T22:12:27.794852+00:00 srv-web-01 python3.12[32497]: ansible-ansible.legacy.slurp Invoked with src=/var/log/syslog\n2026-03-01T22:13:22.849423+00:00 srv-web-01 systemd[1]: session-37.scope: Deactivated successfully.\n2026-03-01T22:13:22.850170+00:00 srv-web-01 systemd[1]: session-37.scope: Consumed 1min 11.926s CPU time.\n2026-03-01T22:16:10.853410+00:00 srv-web-01 PackageKit: daemon quit\n2026-03-01T22:16:10.908059+00:00 srv-web-01 systemd[1]: packagekit.service: Deactivated successfully.\n2026-03-01T23:15:33.720878+00:00 srv-web-01 kernel: workqueue: psi_avgs_work hogged CPU for >10000us 512 times, consider switching to WQ_UNBOUND\n2026-03-01T23:37:26.022056+00:00 srv-web-01 systemd-resolved[620]: Clock change detected. Flushing caches.\n2026-03-01T23:37:43.811250+00:00 srv-web-01 systemd[1]: Started session-38.scope - Session 38 of User deploy.\n2026-03-01T23:37:48.704995+00:00 srv-web-01 python3.12[32580]: ansible-ansible.legacy.setup Invoked with gather_subset=['all'] gather_timeout=10 filter=[] fact_path=/etc/ansible/facts.d\n2026-03-01T23:37:56.109593+00:00 srv-web-01 python3.12[32707]: ansible-ansible.legacy.command Invoked with _raw_params=tail -n 20 /var/log/syslog _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None chdir=None executable=None creates=None removes=None stdin=None"
+}
+2026-02-28 03:41:17,587 p=24942 u=deploy n=ansible INFO| TASK [Récupérer le fichier syslog complet] *************************************************************************************************************************************************************
+2026-02-28 03:41:21,011 p=24942 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 03:41:21,039 p=24942 u=deploy n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************************************************************
+2026-02-28 03:41:21,042 p=24942 u=deploy n=ansible INFO| srv-web-01                 : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-28 07:26:08,126 p=27354 u=deploy n=ansible ERROR| [ERROR]: the playbook: deploy.yam could not be found
+
+2026-02-28 07:26:27,238 p=27361 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (control) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2026-02-28 07:26:28,670 p=27361 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *******************************************************************************************************************************************************************
+2026-02-28 07:26:28,725 p=27361 u=deploy n=ansible INFO| TASK [Gathering Facts] *********************************************************************************************************************************************************************************
+2026-02-28 07:26:35,201 p=27361 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:26:35,233 p=27361 u=deploy n=ansible INFO| TASK [INSTALL DEPENDANCES DOCKER] **********************************************************************************************************************************************************************
+2026-02-28 07:26:38,918 p=27361 u=deploy n=ansible ERROR| [ERROR]: Task failed: process object is closed
+Origin: /home/deploy/codes/ansible/evaluation2_ansible/deploy.yaml:9:7
+
+7   pre_tasks:
+8
+9     - name: INSTALL DEPENDANCES DOCKER
+        ^ column 7
+
+
+2026-02-28 07:26:38,927 p=27361 u=deploy n=ansible INFO| fatal: [srv-web-01]: FAILED! => {"changed": false, "msg": "Task failed: process object is closed"}
+2026-02-28 07:26:38,944 p=27361 u=deploy n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************************************************************
+2026-02-28 07:26:38,948 p=27361 u=deploy n=ansible INFO| srv-web-01                 : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-02-28 07:27:17,479 p=27403 u=deploy n=ansible WARNING| [WARNING]: Skipping key (control) in group (hosts) as it is not a mapping, it is a <class 'ansible.module_utils._internal._datatag._AnsibleTaggedStr'>
+
+2026-02-28 07:27:18,474 p=27403 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *******************************************************************************************************************************************************************
+2026-02-28 07:27:18,536 p=27403 u=deploy n=ansible INFO| TASK [Gathering Facts] *********************************************************************************************************************************************************************************
+2026-02-28 07:27:23,637 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:27:23,671 p=27403 u=deploy n=ansible INFO| TASK [INSTALL DEPENDANCES DOCKER] **********************************************************************************************************************************************************************
+2026-02-28 07:27:43,765 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:27:43,789 p=27403 u=deploy n=ansible INFO| TASK [AJOUT CLE GPG DE DOCKER] *************************************************************************************************************************************************************************
+2026-02-28 07:27:46,698 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:27:46,718 p=27403 u=deploy n=ansible INFO| TASK [AJOUT DEPOT APT DE DOCKER] ***********************************************************************************************************************************************************************
+2026-02-28 07:27:49,232 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:27:49,273 p=27403 u=deploy n=ansible INFO| TASK [INSTALL DOCKER] **********************************************************************************************************************************************************************************
+2026-02-28 07:27:55,044 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:27:55,071 p=27403 u=deploy n=ansible INFO| TASK [INSTALL DOCKER COMPOSE V2] ***********************************************************************************************************************************************************************
+2026-02-28 07:27:58,202 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:27:58,228 p=27403 u=deploy n=ansible INFO| TASK [DEMARRE DOCKER] **********************************************************************************************************************************************************************************
+2026-02-28 07:28:01,440 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:01,478 p=27403 u=deploy n=ansible INFO| TASK [Ajouter domaine dans /etc/hosts] *****************************************************************************************************************************************************************
+2026-02-28 07:28:03,764 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:03,790 p=27403 u=deploy n=ansible INFO| TASK [Creer dossier principal] *************************************************************************************************************************************************************************
+2026-02-28 07:28:06,068 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:06,095 p=27403 u=deploy n=ansible INFO| TASK [Creer dossier php] *******************************************************************************************************************************************************************************
+2026-02-28 07:28:07,759 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:07,779 p=27403 u=deploy n=ansible INFO| TASK [Creer dossier monsite] ***************************************************************************************************************************************************************************
+2026-02-28 07:28:09,194 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:09,226 p=27403 u=deploy n=ansible INFO| TASK [Creer dossier html] ******************************************************************************************************************************************************************************
+2026-02-28 07:28:10,987 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:11,025 p=27403 u=deploy n=ansible INFO| TASK [Creer dossier conf] ******************************************************************************************************************************************************************************
+2026-02-28 07:28:12,741 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:12,792 p=27403 u=deploy n=ansible INFO| TASK [Copier le fichier docker-compose.yml] ************************************************************************************************************************************************************
+2026-02-28 07:28:15,674 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:15,704 p=27403 u=deploy n=ansible INFO| TASK [Copier le fichier default.conf] ******************************************************************************************************************************************************************
+2026-02-28 07:28:18,059 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:18,088 p=27403 u=deploy n=ansible INFO| TASK [Copier le fichier index.php] *********************************************************************************************************************************************************************
+2026-02-28 07:28:20,894 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:20,920 p=27403 u=deploy n=ansible INFO| TASK [Copier le fichier Dockerfile] ********************************************************************************************************************************************************************
+2026-02-28 07:28:23,712 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:23,742 p=27403 u=deploy n=ansible INFO| TASK [Lancer les conteneurs Docker] ********************************************************************************************************************************************************************
+2026-02-28 07:28:27,803 p=27403 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 07:28:27,927 p=27403 u=deploy n=ansible INFO| TASK [Installer rsyslog] *******************************************************************************************************************************************************************************
+2026-02-28 07:28:31,104 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:31,145 p=27403 u=deploy n=ansible INFO| TASK [Assurer que rsyslog est en service] **************************************************************************************************************************************************************
+2026-02-28 07:28:34,818 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:34,846 p=27403 u=deploy n=ansible INFO| TASK [Ajouter une règle personnalisée pour rsyslog] ****************************************************************************************************************************************************
+2026-02-28 07:28:36,326 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 07:28:36,375 p=27403 u=deploy n=ansible INFO| TASK [Lire les logs syslog] ****************************************************************************************************************************************************************************
+2026-02-28 07:28:37,811 p=27403 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 07:28:37,839 p=27403 u=deploy n=ansible INFO| TASK [Afficher les logs syslog] ************************************************************************************************************************************************************************
+2026-02-28 07:28:38,003 p=27403 u=deploy n=ansible INFO| ok: [srv-web-01] => {
+    "syslog_output.stdout": "2026-03-02T10:06:41.101582+00:00 srv-web-01 python3.12[5420]: ansible-ansible.legacy.stat Invoked with path=/evaluation2_ansible/php/Dockerfile follow=False get_checksum=True get_size=False checksum_algorithm=sha1 get_mime=True get_attributes=True\n2026-03-02T10:06:42.177184+00:00 srv-web-01 python3.12[5431]: ansible-ansible.legacy.file Invoked with group=deploy mode=0644 owner=deploy dest=/evaluation2_ansible/php/Dockerfile _original_basename=Dockerfile recurse=False state=file path=/evaluation2_ansible/php/Dockerfile force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _diff_peek=None src=None modification_time=None access_time=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T10:06:44.613943+00:00 srv-web-01 python3.12[5454]: ansible-ansible.legacy.command Invoked with _raw_params=docker compose up -d chdir=/evaluation2_ansible _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None executable=None creates=None removes=None stdin=None\n2026-03-02T10:06:45.444207+00:00 srv-web-01 containerd[806]: time=\"2026-03-02T10:06:45.443595752Z\" level=info msg=\"connecting to shim 98d3add9b159378a917f538fc0f96c9fce2d6bc666fd5fe71a0213e40e72b088\" address=\"unix:///run/containerd/s/a220a657a0440b7b54347a58abe1eb5baa6609565cb7a1a7bc779d26d39a45d2\" namespace=moby protocol=ttrpc version=3\n2026-03-02T10:06:45.488334+00:00 srv-web-01 systemd[1]: Started docker-98d3add9b159378a917f538fc0f96c9fce2d6bc666fd5fe71a0213e40e72b088.scope - libcontainer container 98d3add9b159378a917f538fc0f96c9fce2d6bc666fd5fe71a0213e40e72b088.\n2026-03-02T10:06:45.579348+00:00 srv-web-01 kernel: br-5575208339f4: port 2(veth0a69d50) entered blocking state\n2026-03-02T10:06:45.579367+00:00 srv-web-01 kernel: br-5575208339f4: port 2(veth0a69d50) entered disabled state\n2026-03-02T10:06:45.579368+00:00 srv-web-01 kernel: veth0a69d50: entered allmulticast mode\n2026-03-02T10:06:45.579369+00:00 srv-web-01 kernel: veth0a69d50: entered promiscuous mode\n2026-03-02T10:06:45.592831+00:00 srv-web-01 systemd-networkd[514]: veth0a69d50: Link UP\n2026-03-02T10:06:45.803667+00:00 srv-web-01 kernel: eth0: renamed from vethd979dc2\n2026-03-02T10:06:45.811446+00:00 srv-web-01 kernel: br-5575208339f4: port 2(veth0a69d50) entered blocking state\n2026-03-02T10:06:45.811477+00:00 srv-web-01 kernel: br-5575208339f4: port 2(veth0a69d50) entered forwarding state\n2026-03-02T10:06:45.812329+00:00 srv-web-01 systemd-networkd[514]: veth0a69d50: Gained carrier\n2026-03-02T10:06:45.818359+00:00 srv-web-01 dockerd[915]: time=\"2026-03-02T10:06:45.817679177Z\" level=info msg=\"sbJoin: gwep4 ''->'50d3a08c34ea', gwep6 ''->''\" eid=50d3a08c34ea ep=evaluation2_ansible-php-1 net=evaluation2_ansible_backend nid=5575208339f4 spanID=5cbe6162235c8d33 traceID=85b261a2e38c76bdcee688a52d5ee2fc\n2026-03-02T10:06:47.084117+00:00 srv-web-01 systemd-networkd[514]: veth0a69d50: Gained IPv6LL\n2026-03-02T10:06:47.709553+00:00 srv-web-01 python3.12[5576]: ansible-ansible.legacy.apt Invoked with name=rsyslog state=present package=['rsyslog'] update_cache_retries=5 update_cache_retry_max_delay=12 cache_valid_time=0 purge=False force=False upgrade=no dpkg_options=force-confdef,force-confold autoremove=False autoclean=False fail_on_autoremove=False only_upgrade=False force_apt_get=False clean=False allow_unauthenticated=False allow_downgrade=False allow_change_held_packages=False lock_timeout=60 auto_install_module_deps=True update_cache=None deb=None default_release=None install_recommends=None policy_rc_d=None\n2026-03-02T10:06:52.287887+00:00 srv-web-01 python3.12[5605]: ansible-ansible.builtin.systemd Invoked with enabled=True name=rsyslog state=started daemon_reload=False daemon_reexec=False scope=system no_block=False force=None masked=None\n2026-03-02T10:06:53.822218+00:00 srv-web-01 python3.12[5630]: ansible-ansible.builtin.lineinfile Invoked with create=True line=*.* /var/log/docker_tasks.log path=/etc/rsyslog.d/50-default.conf state=present backrefs=False backup=False firstmatch=False unsafe_writes=False regexp=None search_string=None insertafter=None insertbefore=None validate=None mode=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T10:06:55.180919+00:00 srv-web-01 python3.12[5653]: ansible-ansible.legacy.command Invoked with _raw_params=tail -n 20 /var/log/syslog _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None chdir=None executable=None creates=None removes=None stdin=None"
+}
+2026-02-28 07:28:38,028 p=27403 u=deploy n=ansible INFO| TASK [Récupérer le fichier syslog complet] *************************************************************************************************************************************************************
+2026-02-28 07:28:40,480 p=27403 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 07:28:40,499 p=27403 u=deploy n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************************************************************
+2026-02-28 07:28:40,501 p=27403 u=deploy n=ansible INFO| srv-web-01                 : ok=24   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-28 07:32:39,778 p=27696 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (control) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2026-02-28 07:32:39,795 p=27696 u=deploy n=ansible INFO| @all:
+  |--@ungrouped:
+  |--@hosts:
+  |--@prod:
+  |  |--srv-web-01
+2026-02-28 07:36:13,477 p=27736 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (control) in group (children), only "vars", "children" and "hosts" are valid
+
+2026-02-28 07:36:13,500 p=27736 u=deploy n=ansible INFO| @all:
+  |--@ungrouped:
+  |--@children:
+  |--@prod:
+  |  |--srv-web-01
+2026-02-28 08:09:04,110 p=28127 u=deploy n=ansible INFO| @all:
+  |--@ungrouped:
+  |--@prod:
+  |  |--srv-web-01
+2026-02-28 08:10:21,153 p=28144 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (control) in group (children), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:10:21,189 p=28144 u=deploy n=ansible INFO| @all:
+  |--@ungrouped:
+  |--@children:
+  |--@prod:
+  |  |--srv-web-01
+2026-02-28 08:10:54,613 p=28148 u=deploy n=ansible WARNING| [WARNING]: Error in vault password prompt (default): Invalid vault password was provided
+
+2026-02-28 08:10:54,615 p=28148 u=deploy n=ansible ERROR| [ERROR]: Invalid vault password was provided
+
+2026-02-28 08:11:07,256 p=28154 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (control) in group (children), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:11:08,459 p=28154 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *******************************************************************************************************************************************************************
+2026-02-28 08:11:08,528 p=28154 u=deploy n=ansible INFO| TASK [Gathering Facts] *********************************************************************************************************************************************************************************
+2026-02-28 08:11:18,805 p=28154 u=deploy n=ansible ERROR| [ERROR]: Task failed: Failed to connect to the host via ssh: ssh: connect to host 192.168.133.189 port 22: Connection timed out
+
+2026-02-28 08:11:18,809 p=28154 u=deploy n=ansible INFO| fatal: [srv-web-01]: UNREACHABLE! => {"changed": false, "msg": "Task failed: Failed to connect to the host via ssh: ssh: connect to host 192.168.133.189 port 22: Connection timed out", "unreachable": true}
+2026-02-28 08:11:18,813 p=28154 u=deploy n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************************************************************
+2026-02-28 08:11:18,814 p=28154 u=deploy n=ansible INFO| srv-web-01                 : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-28 08:12:32,323 p=28173 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (localhost) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:12:33,471 p=28173 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *******************************************************************************************************************************************************************
+2026-02-28 08:12:33,503 p=28173 u=deploy n=ansible INFO| TASK [Gathering Facts] *********************************************************************************************************************************************************************************
+2026-02-28 08:12:36,865 p=28173 u=deploy n=ansible ERROR| [ERROR]: Task failed: Failed to connect to the host via ssh: ssh: connect to host 192.168.133.189 port 22: No route to host
+
+2026-02-28 08:12:36,874 p=28173 u=deploy n=ansible INFO| fatal: [srv-web-01]: UNREACHABLE! => {"changed": false, "msg": "Task failed: Failed to connect to the host via ssh: ssh: connect to host 192.168.133.189 port 22: No route to host", "unreachable": true}
+2026-02-28 08:12:36,881 p=28173 u=deploy n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************************************************************
+2026-02-28 08:12:36,882 p=28173 u=deploy n=ansible INFO| srv-web-01                 : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-28 08:14:25,000 p=28198 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (localhost) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:14:26,304 p=28198 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *******************************************************************************************************************************************************************
+2026-02-28 08:14:26,355 p=28198 u=deploy n=ansible INFO| TASK [Gathering Facts] *********************************************************************************************************************************************************************************
+2026-02-28 08:14:31,970 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:14:31,994 p=28198 u=deploy n=ansible INFO| TASK [INSTALL DEPENDANCES DOCKER] **********************************************************************************************************************************************************************
+2026-02-28 08:14:40,105 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:14:40,148 p=28198 u=deploy n=ansible INFO| TASK [AJOUT CLE GPG DE DOCKER] *************************************************************************************************************************************************************************
+2026-02-28 08:14:43,563 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:14:43,590 p=28198 u=deploy n=ansible INFO| TASK [AJOUT DEPOT APT DE DOCKER] ***********************************************************************************************************************************************************************
+2026-02-28 08:14:46,052 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:14:46,083 p=28198 u=deploy n=ansible INFO| TASK [INSTALL DOCKER] **********************************************************************************************************************************************************************************
+2026-02-28 08:14:51,564 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:14:51,603 p=28198 u=deploy n=ansible INFO| TASK [INSTALL DOCKER COMPOSE V2] ***********************************************************************************************************************************************************************
+2026-02-28 08:14:54,940 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:14:54,967 p=28198 u=deploy n=ansible INFO| TASK [DEMARRE DOCKER] **********************************************************************************************************************************************************************************
+2026-02-28 08:14:58,119 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:14:58,150 p=28198 u=deploy n=ansible INFO| TASK [Ajouter domaine dans /etc/hosts] *****************************************************************************************************************************************************************
+2026-02-28 08:15:00,232 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:00,258 p=28198 u=deploy n=ansible INFO| TASK [Creer dossier principal] *************************************************************************************************************************************************************************
+2026-02-28 08:15:02,943 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:02,993 p=28198 u=deploy n=ansible INFO| TASK [Creer dossier php] *******************************************************************************************************************************************************************************
+2026-02-28 08:15:05,006 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:05,039 p=28198 u=deploy n=ansible INFO| TASK [Creer dossier monsite] ***************************************************************************************************************************************************************************
+2026-02-28 08:15:06,853 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:06,886 p=28198 u=deploy n=ansible INFO| TASK [Creer dossier html] ******************************************************************************************************************************************************************************
+2026-02-28 08:15:08,737 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:08,791 p=28198 u=deploy n=ansible INFO| TASK [Creer dossier conf] ******************************************************************************************************************************************************************************
+2026-02-28 08:15:10,612 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:10,674 p=28198 u=deploy n=ansible INFO| TASK [Copier le fichier docker-compose.yml] ************************************************************************************************************************************************************
+2026-02-28 08:15:14,263 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:14,296 p=28198 u=deploy n=ansible INFO| TASK [Copier le fichier default.conf] ******************************************************************************************************************************************************************
+2026-02-28 08:15:17,212 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:17,260 p=28198 u=deploy n=ansible INFO| TASK [Copier le fichier index.php] *********************************************************************************************************************************************************************
+2026-02-28 08:15:20,109 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:20,139 p=28198 u=deploy n=ansible INFO| TASK [Copier le fichier Dockerfile] ********************************************************************************************************************************************************************
+2026-02-28 08:15:22,909 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:22,951 p=28198 u=deploy n=ansible INFO| TASK [Lancer les conteneurs Docker] ********************************************************************************************************************************************************************
+2026-02-28 08:15:26,710 p=28198 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 08:15:26,820 p=28198 u=deploy n=ansible INFO| TASK [Installer rsyslog] *******************************************************************************************************************************************************************************
+2026-02-28 08:15:30,371 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:30,410 p=28198 u=deploy n=ansible INFO| TASK [Assurer que rsyslog est en service] **************************************************************************************************************************************************************
+2026-02-28 08:15:34,358 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:34,434 p=28198 u=deploy n=ansible INFO| TASK [Ajouter une règle personnalisée pour rsyslog] ****************************************************************************************************************************************************
+2026-02-28 08:15:36,174 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:15:36,212 p=28198 u=deploy n=ansible INFO| TASK [Lire les logs syslog] ****************************************************************************************************************************************************************************
+2026-02-28 08:15:38,181 p=28198 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 08:15:38,219 p=28198 u=deploy n=ansible INFO| TASK [Afficher les logs syslog] ************************************************************************************************************************************************************************
+2026-02-28 08:15:38,474 p=28198 u=deploy n=ansible INFO| ok: [srv-web-01] => {
+    "syslog_output.stdout": "2026-03-02T10:50:03.443559+00:00 srv-web-01 python3.12[4621]: ansible-ansible.legacy.stat Invoked with path=/evaluation2_ansible/php/Dockerfile follow=False get_checksum=True get_size=False checksum_algorithm=sha1 get_mime=True get_attributes=True\n2026-03-02T10:50:04.470074+00:00 srv-web-01 python3.12[4632]: ansible-ansible.legacy.file Invoked with group=deploy mode=0644 owner=deploy dest=/evaluation2_ansible/php/Dockerfile _original_basename=Dockerfile recurse=False state=file path=/evaluation2_ansible/php/Dockerfile force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _diff_peek=None src=None modification_time=None access_time=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T10:50:06.766499+00:00 srv-web-01 python3.12[4655]: ansible-ansible.legacy.command Invoked with _raw_params=docker compose up -d chdir=/evaluation2_ansible _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None executable=None creates=None removes=None stdin=None\n2026-03-02T10:50:07.582431+00:00 srv-web-01 containerd[789]: time=\"2026-03-02T10:50:07.581781073Z\" level=info msg=\"connecting to shim 98d3add9b159378a917f538fc0f96c9fce2d6bc666fd5fe71a0213e40e72b088\" address=\"unix:///run/containerd/s/a220a657a0440b7b54347a58abe1eb5baa6609565cb7a1a7bc779d26d39a45d2\" namespace=moby protocol=ttrpc version=3\n2026-03-02T10:50:07.668912+00:00 srv-web-01 systemd[1]: Started docker-98d3add9b159378a917f538fc0f96c9fce2d6bc666fd5fe71a0213e40e72b088.scope - libcontainer container 98d3add9b159378a917f538fc0f96c9fce2d6bc666fd5fe71a0213e40e72b088.\n2026-03-02T10:50:07.807257+00:00 srv-web-01 kernel: br-5575208339f4: port 2(veth64c396a) entered blocking state\n2026-03-02T10:50:07.807327+00:00 srv-web-01 kernel: br-5575208339f4: port 2(veth64c396a) entered disabled state\n2026-03-02T10:50:07.807329+00:00 srv-web-01 kernel: veth64c396a: entered allmulticast mode\n2026-03-02T10:50:07.810179+00:00 srv-web-01 kernel: veth64c396a: entered promiscuous mode\n2026-03-02T10:50:07.824895+00:00 srv-web-01 systemd-networkd[501]: veth64c396a: Link UP\n2026-03-02T10:50:07.887216+00:00 srv-web-01 kernel: eth0: renamed from veth915b4d5\n2026-03-02T10:50:07.898201+00:00 srv-web-01 kernel: br-5575208339f4: port 2(veth64c396a) entered blocking state\n2026-03-02T10:50:07.898230+00:00 srv-web-01 kernel: br-5575208339f4: port 2(veth64c396a) entered forwarding state\n2026-03-02T10:50:07.899915+00:00 srv-web-01 systemd-networkd[501]: veth64c396a: Gained carrier\n2026-03-02T10:50:07.910945+00:00 srv-web-01 dockerd[892]: time=\"2026-03-02T10:50:07.908352476Z\" level=info msg=\"sbJoin: gwep4 ''->'e1802d7f0859', gwep6 ''->''\" eid=e1802d7f0859 ep=evaluation2_ansible-php-1 net=evaluation2_ansible_backend nid=5575208339f4 spanID=9a314cb5a51c476b traceID=409b6cb07bb1329c319d8df435914c99\n2026-03-02T10:50:09.172035+00:00 srv-web-01 systemd-networkd[501]: veth64c396a: Gained IPv6LL\n2026-03-02T10:50:09.895844+00:00 srv-web-01 python3.12[4779]: ansible-ansible.legacy.apt Invoked with name=rsyslog state=present package=['rsyslog'] update_cache_retries=5 update_cache_retry_max_delay=12 cache_valid_time=0 purge=False force=False upgrade=no dpkg_options=force-confdef,force-confold autoremove=False autoclean=False fail_on_autoremove=False only_upgrade=False force_apt_get=False clean=False allow_unauthenticated=False allow_downgrade=False allow_change_held_packages=False lock_timeout=60 auto_install_module_deps=True update_cache=None deb=None default_release=None install_recommends=None policy_rc_d=None\n2026-03-02T10:50:14.907476+00:00 srv-web-01 python3.12[4808]: ansible-ansible.builtin.systemd Invoked with enabled=True name=rsyslog state=started daemon_reload=False daemon_reexec=False scope=system no_block=False force=None masked=None\n2026-03-02T10:50:16.731674+00:00 srv-web-01 python3.12[4833]: ansible-ansible.builtin.lineinfile Invoked with create=True line=*.* /var/log/docker_tasks.log path=/etc/rsyslog.d/50-default.conf state=present backrefs=False backup=False firstmatch=False unsafe_writes=False regexp=None search_string=None insertafter=None insertbefore=None validate=None mode=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T10:50:18.548411+00:00 srv-web-01 python3.12[4856]: ansible-ansible.legacy.command Invoked with _raw_params=tail -n 20 /var/log/syslog _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None chdir=None executable=None creates=None removes=None stdin=None"
+}
+2026-02-28 08:15:38,503 p=28198 u=deploy n=ansible INFO| TASK [Récupérer le fichier syslog complet] *************************************************************************************************************************************************************
+2026-02-28 08:15:41,283 p=28198 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 08:15:41,297 p=28198 u=deploy n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************************************************************
+2026-02-28 08:15:41,299 p=28198 u=deploy n=ansible INFO| srv-web-01                 : ok=24   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-28 08:21:51,373 p=28499 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (localhost) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:21:51,375 p=28499 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (prod) in group (children), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:21:51,391 p=28499 u=deploy n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2026-02-28 08:21:52,205 p=28499 u=deploy n=ansible WARNING| [WARNING]: Could not match supplied host pattern, ignoring: prod
+
+2026-02-28 08:21:52,249 p=28499 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *********************************************************************************************************************************************
+2026-02-28 08:21:52,250 p=28499 u=deploy n=ansible INFO| skipping: no hosts matched
+2026-02-28 08:21:52,254 p=28499 u=deploy n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************
+2026-02-28 08:23:43,296 p=28521 u=deploy n=ansible WARNING| [WARNING]: Failed to parse inventory with 'auto' plugin: YAML parsing failed: While parsing a block mapping did not find expected key.
+
+Failed to parse inventory with 'auto' plugin.
+
+<<< caused by >>>
+
+YAML parsing failed: While parsing a block mapping did not find expected key.
+Origin: /home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml:15:5
+
+13   srv-web-01:
+14    ansible_host: 192.168.133.189 # A remplacer par l'IP de votre client
+15     ansible_ssh_private_key_file: ~/.ssh/id_ed25519
+       ^ column 5
+
+
+2026-02-28 08:23:43,299 p=28521 u=deploy n=ansible WARNING| [WARNING]: Failed to parse inventory with 'yaml' plugin: YAML parsing failed: While parsing a block mapping did not find expected key.
+
+Failed to parse inventory with 'yaml' plugin.
+
+<<< caused by >>>
+
+YAML parsing failed: While parsing a block mapping did not find expected key.
+Origin: <inventory plugin 'yaml' with source '/home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml'>
+
+
+2026-02-28 08:23:43,301 p=28521 u=deploy n=ansible WARNING| [WARNING]: Failed to parse inventory with 'ini' plugin: Failed to parse inventory: Invalid host pattern '---' supplied, '---' is normally a sign this is a YAML file.
+
+Failed to parse inventory with 'ini' plugin.
+
+<<< caused by >>>
+
+Failed to parse inventory: Invalid host pattern '---' supplied, '---' is normally a sign this is a YAML file.
+Origin: /home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml
+
+
+2026-02-28 08:23:43,302 p=28521 u=deploy n=ansible WARNING| [WARNING]: Unable to parse /home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml as an inventory source
+
+2026-02-28 08:23:43,303 p=28521 u=deploy n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2026-02-28 08:23:43,320 p=28521 u=deploy n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2026-02-28 08:23:44,412 p=28521 u=deploy n=ansible WARNING| [WARNING]: Could not match supplied host pattern, ignoring: prod
+
+2026-02-28 08:23:44,436 p=28521 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *********************************************************************************************************************************************
+2026-02-28 08:23:44,438 p=28521 u=deploy n=ansible INFO| skipping: no hosts matched
+2026-02-28 08:23:44,438 p=28521 u=deploy n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************
+2026-02-28 08:24:41,373 p=28536 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (localhost) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:24:41,377 p=28536 u=deploy n=ansible WARNING| [WARNING]: Failed to parse inventory with 'auto' plugin: no root 'plugin' key found, '/home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml' is not a valid YAML inventory plugin config file
+
+Failed to parse inventory with 'auto' plugin.
+
+<<< caused by >>>
+
+no root 'plugin' key found, '/home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml' is not a valid YAML inventory plugin config file
+Origin: <inventory plugin 'auto' with source '/home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml'>
+
+
+2026-02-28 08:24:41,380 p=28536 u=deploy n=ansible WARNING| [WARNING]: Failed to parse inventory with 'yaml' plugin: Invalid data from file, expected dictionary and got:
+
+192.168.133.189
+
+Failed to parse inventory with 'yaml' plugin.
+
+<<< caused by >>>
+
+Invalid data from file, expected dictionary and got:
+
+192.168.133.189
+Origin: <inventory plugin 'yaml' with source '/home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml'>
+
+
+2026-02-28 08:24:41,382 p=28536 u=deploy n=ansible WARNING| [WARNING]: Failed to parse inventory with 'ini' plugin: Failed to parse inventory: Invalid host pattern '---' supplied, '---' is normally a sign this is a YAML file.
+
+Failed to parse inventory with 'ini' plugin.
+
+<<< caused by >>>
+
+Failed to parse inventory: Invalid host pattern '---' supplied, '---' is normally a sign this is a YAML file.
+Origin: /home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml
+
+
+2026-02-28 08:24:41,383 p=28536 u=deploy n=ansible WARNING| [WARNING]: Unable to parse /home/deploy/codes/ansible/evaluation2_ansible/hosts.yaml as an inventory source
+
+2026-02-28 08:24:41,383 p=28536 u=deploy n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2026-02-28 08:24:41,398 p=28536 u=deploy n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2026-02-28 08:24:42,287 p=28536 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *********************************************************************************************************************************************
+2026-02-28 08:24:42,320 p=28536 u=deploy n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2026-02-28 08:24:42,866 p=28536 u=deploy n=ansible ERROR| [ERROR]: Task failed: Failed to connect to the host via ssh: ssh: Could not resolve hostname srv-web-01: Temporary failure in name resolution
+
+2026-02-28 08:24:42,874 p=28536 u=deploy n=ansible INFO| fatal: [srv-web-01]: UNREACHABLE! => {"changed": false, "msg": "Task failed: Failed to connect to the host via ssh: ssh: Could not resolve hostname srv-web-01: Temporary failure in name resolution", "unreachable": true}
+2026-02-28 08:24:42,881 p=28536 u=deploy n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************
+2026-02-28 08:24:42,881 p=28536 u=deploy n=ansible INFO| srv-web-01                 : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-28 08:28:26,399 p=28597 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (control) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:28:27,378 p=28597 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *********************************************************************************************************************************************
+2026-02-28 08:28:27,431 p=28597 u=deploy n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2026-02-28 08:28:34,690 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:28:34,715 p=28597 u=deploy n=ansible INFO| TASK [INSTALL DEPENDANCES DOCKER] ************************************************************************************************************************************************
+2026-02-28 08:28:41,659 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:28:41,709 p=28597 u=deploy n=ansible INFO| TASK [AJOUT CLE GPG DE DOCKER] ***************************************************************************************************************************************************
+2026-02-28 08:28:45,812 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:28:45,864 p=28597 u=deploy n=ansible INFO| TASK [AJOUT DEPOT APT DE DOCKER] *************************************************************************************************************************************************
+2026-02-28 08:28:49,227 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:28:49,278 p=28597 u=deploy n=ansible INFO| TASK [INSTALL DOCKER] ************************************************************************************************************************************************************
+2026-02-28 08:28:55,724 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:28:55,825 p=28597 u=deploy n=ansible INFO| TASK [INSTALL DOCKER COMPOSE V2] *************************************************************************************************************************************************
+2026-02-28 08:28:59,899 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:28:59,987 p=28597 u=deploy n=ansible INFO| TASK [DEMARRE DOCKER] ************************************************************************************************************************************************************
+2026-02-28 08:29:04,231 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:04,296 p=28597 u=deploy n=ansible INFO| TASK [Ajouter domaine dans /etc/hosts] *******************************************************************************************************************************************
+2026-02-28 08:29:07,917 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:07,965 p=28597 u=deploy n=ansible INFO| TASK [Creer dossier principal] ***************************************************************************************************************************************************
+2026-02-28 08:29:11,007 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:11,027 p=28597 u=deploy n=ansible INFO| TASK [Creer dossier php] *********************************************************************************************************************************************************
+2026-02-28 08:29:13,207 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:13,287 p=28597 u=deploy n=ansible INFO| TASK [Creer dossier monsite] *****************************************************************************************************************************************************
+2026-02-28 08:29:15,310 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:15,346 p=28597 u=deploy n=ansible INFO| TASK [Creer dossier html] ********************************************************************************************************************************************************
+2026-02-28 08:29:17,425 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:17,480 p=28597 u=deploy n=ansible INFO| TASK [Creer dossier conf] ********************************************************************************************************************************************************
+2026-02-28 08:29:19,913 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:20,010 p=28597 u=deploy n=ansible INFO| TASK [Copier le fichier docker-compose.yml] **************************************************************************************************************************************
+2026-02-28 08:29:24,587 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:24,637 p=28597 u=deploy n=ansible INFO| TASK [Copier le fichier default.conf] ********************************************************************************************************************************************
+2026-02-28 08:29:28,577 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:28,626 p=28597 u=deploy n=ansible INFO| TASK [Copier le fichier index.php] ***********************************************************************************************************************************************
+2026-02-28 08:29:32,510 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:32,541 p=28597 u=deploy n=ansible INFO| TASK [Copier le fichier Dockerfile] **********************************************************************************************************************************************
+2026-02-28 08:29:36,255 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:36,308 p=28597 u=deploy n=ansible INFO| TASK [Lancer les conteneurs Docker] **********************************************************************************************************************************************
+2026-02-28 08:29:39,259 p=28597 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 08:29:39,510 p=28597 u=deploy n=ansible INFO| TASK [Installer rsyslog] *********************************************************************************************************************************************************
+2026-02-28 08:29:43,334 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:43,381 p=28597 u=deploy n=ansible INFO| TASK [Assurer que rsyslog est en service] ****************************************************************************************************************************************
+2026-02-28 08:29:48,400 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:48,478 p=28597 u=deploy n=ansible INFO| TASK [Ajouter une règle personnalisée pour rsyslog] ******************************************************************************************************************************
+2026-02-28 08:29:50,928 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:29:50,981 p=28597 u=deploy n=ansible INFO| TASK [Lire les logs syslog] ******************************************************************************************************************************************************
+2026-02-28 08:29:52,735 p=28597 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 08:29:52,772 p=28597 u=deploy n=ansible INFO| TASK [Afficher les logs syslog] **************************************************************************************************************************************************
+2026-02-28 08:29:53,242 p=28597 u=deploy n=ansible INFO| ok: [srv-web-01] => {
+    "syslog_output.stdout": "2026-03-02T11:02:50.838718+00:00 srv-web-01 python3.12[6085]: ansible-file Invoked with mode=0755 path=/evaluation2_ansible/php state=directory recurse=False force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _original_basename=None _diff_peek=None src=None modification_time=None access_time=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T11:02:52.717501+00:00 srv-web-01 python3.12[6108]: ansible-file Invoked with mode=0755 path=/evaluation2_ansible/monsite state=directory recurse=False force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _original_basename=None _diff_peek=None src=None modification_time=None access_time=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T11:02:54.769072+00:00 srv-web-01 python3.12[6131]: ansible-file Invoked with mode=0755 path=/evaluation2_ansible/monsite/html state=directory recurse=False force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _original_basename=None _diff_peek=None src=None modification_time=None access_time=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T11:02:56.965871+00:00 srv-web-01 python3.12[6154]: ansible-file Invoked with mode=0755 path=/evaluation2_ansible/monsite/conf state=directory recurse=False force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _original_basename=None _diff_peek=None src=None modification_time=None access_time=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T11:02:59.746847+00:00 srv-web-01 python3.12[6177]: ansible-ansible.legacy.stat Invoked with path=/evaluation2_ansible/docker-compose.yml follow=False get_checksum=True get_size=False checksum_algorithm=sha1 get_mime=True get_attributes=True\n2026-03-02T11:03:01.223308+00:00 srv-web-01 python3.12[6188]: ansible-ansible.legacy.file Invoked with group=deploy mode=0644 owner=deploy dest=/evaluation2_ansible/docker-compose.yml _original_basename=docker-compose.yml recurse=False state=file path=/evaluation2_ansible/docker-compose.yml force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _diff_peek=None src=None modification_time=None access_time=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T11:03:03.431007+00:00 srv-web-01 python3.12[6211]: ansible-ansible.legacy.stat Invoked with path=/evaluation2_ansible/monsite/conf/default.conf follow=False get_checksum=True get_size=False checksum_algorithm=sha1 get_mime=True get_attributes=True\n2026-03-02T11:03:04.990577+00:00 srv-web-01 python3.12[6222]: ansible-ansible.legacy.file Invoked with group=deploy mode=0644 owner=deploy dest=/evaluation2_ansible/monsite/conf/default.conf _original_basename=default.conf recurse=False state=file path=/evaluation2_ansible/monsite/conf/default.conf force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _diff_peek=None src=None modification_time=None access_time=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T11:03:06.965833+00:00 srv-web-01 python3.12[6245]: ansible-ansible.legacy.stat Invoked with path=/evaluation2_ansible/monsite/html/index.php follow=False get_checksum=True get_size=False checksum_algorithm=sha1 get_mime=True get_attributes=True\n2026-03-02T11:03:08.631368+00:00 srv-web-01 python3.12[6256]: ansible-ansible.legacy.file Invoked with group=deploy mode=0644 owner=deploy dest=/evaluation2_ansible/monsite/html/index.php _original_basename=index.php recurse=False state=file path=/evaluation2_ansible/monsite/html/index.php force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _diff_peek=None src=None modification_time=None access_time=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T11:03:10.563596+00:00 srv-web-01 python3.12[6279]: ansible-ansible.legacy.stat Invoked with path=/evaluation2_ansible/php/Dockerfile follow=False get_checksum=True get_size=False checksum_algorithm=sha1 get_mime=True get_attributes=True\n2026-03-02T11:03:12.029673+00:00 srv-web-01 python3.12[6290]: ansible-ansible.legacy.file Invoked with group=deploy mode=0644 owner=deploy dest=/evaluation2_ansible/php/Dockerfile _original_basename=Dockerfile recurse=False state=file path=/evaluation2_ansible/php/Dockerfile force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _diff_peek=None src=None modification_time=None access_time=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T11:03:12.085704+00:00 srv-web-01 systemd[1]: Starting systemd-tmpfiles-clean.service - Cleanup of Temporary Directories...\n2026-03-02T11:03:12.148035+00:00 srv-web-01 systemd[1]: systemd-tmpfiles-clean.service: Deactivated successfully.\n2026-03-02T11:03:12.148374+00:00 srv-web-01 systemd[1]: Finished systemd-tmpfiles-clean.service - Cleanup of Temporary Directories.\n2026-03-02T11:03:14.371281+00:00 srv-web-01 python3.12[6317]: ansible-ansible.legacy.command Invoked with _raw_params=docker compose up -d chdir=/evaluation2_ansible _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None executable=None creates=None removes=None stdin=None\n2026-03-02T11:03:17.167905+00:00 srv-web-01 python3.12[6360]: ansible-ansible.legacy.apt Invoked with name=rsyslog state=present package=['rsyslog'] update_cache_retries=5 update_cache_retry_max_delay=12 cache_valid_time=0 purge=False force=False upgrade=no dpkg_options=force-confdef,force-confold autoremove=False autoclean=False fail_on_autoremove=False only_upgrade=False force_apt_get=False clean=False allow_unauthenticated=False allow_downgrade=False allow_change_held_packages=False lock_timeout=60 auto_install_module_deps=True update_cache=None deb=None default_release=None install_recommends=None policy_rc_d=None\n2026-03-02T11:03:23.045721+00:00 srv-web-01 python3.12[6389]: ansible-ansible.builtin.systemd Invoked with enabled=True name=rsyslog state=started daemon_reload=False daemon_reexec=False scope=system no_block=False force=None masked=None\n2026-03-02T11:03:25.515395+00:00 srv-web-01 python3.12[6414]: ansible-ansible.builtin.lineinfile Invoked with create=True line=*.* /var/log/docker_tasks.log path=/etc/rsyslog.d/50-default.conf state=present backrefs=False backup=False firstmatch=False unsafe_writes=False regexp=None search_string=None insertafter=None insertbefore=None validate=None mode=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None\n2026-03-02T11:03:27.359007+00:00 srv-web-01 python3.12[6437]: ansible-ansible.legacy.command Invoked with _raw_params=tail -n 20 /var/log/syslog _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None chdir=None executable=None creates=None removes=None stdin=None"
+}
+2026-02-28 08:29:53,288 p=28597 u=deploy n=ansible INFO| TASK [Récupérer le fichier syslog complet] ***************************************************************************************************************************************
+2026-02-28 08:29:58,531 p=28597 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 08:29:58,545 p=28597 u=deploy n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************
+2026-02-28 08:29:58,546 p=28597 u=deploy n=ansible INFO| srv-web-01                 : ok=24   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-28 08:33:02,454 p=29038 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (control) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:33:03,514 p=29038 u=deploy n=ansible ERROR| [ERROR]: Error reading `vars_files` file './vars/secret-variables.yaml': Decryption failed (no vault secrets were found that could decrypt).
+
+Error reading `vars_files` file './vars/secret-variables.yaml'.
+Origin: /home/deploy/codes/ansible/evaluation2_ansible/deploy.yaml:5:7
+
+3   become: true
+4   vars_files:
+5     - ./vars/secret-variables.yaml
+        ^ column 7
+
+<<< caused by >>>
+
+Decryption failed (no vault secrets were found that could decrypt).
+Origin: /home/deploy/codes/ansible/evaluation2_ansible/vars/secret-variables.yaml
+
+
+2026-02-28 08:33:33,119 p=29049 u=deploy n=ansible WARNING| [WARNING]: Skipping unexpected key (control) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2026-02-28 08:33:34,587 p=29049 u=deploy n=ansible INFO| PLAY [Creer structure projet Docker] *********************************************************************************************************************************************
+2026-02-28 08:33:34,624 p=29049 u=deploy n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2026-02-28 08:33:39,921 p=29049 u=deploy n=ansible INFO| ok: [srv-web-01]
+2026-02-28 08:33:39,965 p=29049 u=deploy n=ansible INFO| TASK [Lire les logs syslog] ******************************************************************************************************************************************************
+2026-02-28 08:33:42,547 p=29049 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 08:33:42,589 p=29049 u=deploy n=ansible INFO| TASK [Afficher les logs syslog] **************************************************************************************************************************************************
+2026-02-28 08:33:42,792 p=29049 u=deploy n=ansible INFO| ok: [srv-web-01] => {
+    "syslog_output.stdout": "2026-03-02T11:06:52.989002+00:00 srv-web-01 systemd[6482]: Reached target timers.target - Timers.\n2026-03-02T11:06:52.991529+00:00 srv-web-01 systemd[6482]: Starting dbus.socket - D-Bus User Message Bus Socket...\n2026-03-02T11:06:52.991683+00:00 srv-web-01 systemd[6482]: Listening on dirmngr.socket - GnuPG network certificate management daemon.\n2026-03-02T11:06:52.991763+00:00 srv-web-01 systemd[6482]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).\n2026-03-02T11:06:52.991833+00:00 srv-web-01 systemd[6482]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).\n2026-03-02T11:06:52.992146+00:00 srv-web-01 systemd[6482]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...\n2026-03-02T11:06:52.993017+00:00 srv-web-01 systemd[6482]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.\n2026-03-02T11:06:52.993119+00:00 srv-web-01 systemd[6482]: Listening on keyboxd.socket - GnuPG public key management service.\n2026-03-02T11:06:52.993430+00:00 srv-web-01 systemd[6482]: Listening on pk-debconf-helper.socket - debconf communication socket.\n2026-03-02T11:06:52.993633+00:00 srv-web-01 systemd[6482]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.\n2026-03-02T11:06:53.013456+00:00 srv-web-01 systemd[6482]: Listening on dbus.socket - D-Bus User Message Bus Socket.\n2026-03-02T11:06:53.041309+00:00 srv-web-01 systemd[6482]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).\n2026-03-02T11:06:53.041443+00:00 srv-web-01 systemd[6482]: Reached target sockets.target - Sockets.\n2026-03-02T11:06:53.041490+00:00 srv-web-01 systemd[6482]: Reached target basic.target - Basic System.\n2026-03-02T11:06:53.041524+00:00 srv-web-01 systemd[6482]: Reached target default.target - Main User Target.\n2026-03-02T11:06:53.041557+00:00 srv-web-01 systemd[6482]: Startup finished in 223ms.\n2026-03-02T11:06:53.041613+00:00 srv-web-01 systemd[1]: Started user@1001.service - User Manager for UID 1001.\n2026-03-02T11:06:53.050804+00:00 srv-web-01 systemd[1]: Started session-7.scope - Session 7 of User deploy.\n2026-03-02T11:06:55.999819+00:00 srv-web-01 python3.12[6532]: ansible-ansible.legacy.setup Invoked with gather_subset=['all'] gather_timeout=10 filter=[] fact_path=/etc/ansible/facts.d\n2026-03-02T11:06:59.536427+00:00 srv-web-01 python3.12[6659]: ansible-ansible.legacy.command Invoked with _raw_params=tail -n 20 /var/log/syslog _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True cmd=None argv=None chdir=None executable=None creates=None removes=None stdin=None"
+}
+2026-02-28 08:33:42,855 p=29049 u=deploy n=ansible INFO| TASK [Récupérer le fichier syslog complet] ***************************************************************************************************************************************
+2026-02-28 08:33:45,906 p=29049 u=deploy n=ansible INFO| changed: [srv-web-01]
+2026-02-28 08:33:45,916 p=29049 u=deploy n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************
+2026-02-28 08:33:45,917 p=29049 u=deploy n=ansible INFO| srv-web-01                 : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
