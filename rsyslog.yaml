@@ -1,0 +1,35 @@
+---
+
+- name: Automatiser la configuration de la journalisation avec rsyslog
+  hosts: prod
+  become: true
+
+  vars_files:
+    - ./vars/secret-variables.yaml
+
+  tasks:
+    - name: Installer rsyslog
+      ansible.builtin.package:
+        name: rsyslog
+        state: present
+
+    - name: Assurer que rsyslog est en service
+      ansible.builtin.systemd:
+        name: rsyslog
+        state: started
+        enabled: true
+
+    - name: Ajouter une règle personnalisée pour rsyslog
+      ansible.builtin.lineinfile:
+        path: /etc/rsyslog.d/50-default.conf
+        line: "*.* /var/log/docker_tasks.log"
+        create: yes
+        state: present
+      notify:
+        - Restart rsyslog
+
+  handlers:
+    - name: Restart rsyslog
+      ansible.builtin.systemd:
+        name: rsyslog
+        state: restarted

@@ -1,0 +1,65 @@
+- name: Creer structure projet Docker 
+  hosts: prod
+  become: true
+  vars_files:
+    - ./vars/secret-variables.yaml
+
+  pre_tasks:
+
+    - name: INSTALL DEPENDANCES DOCKER
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+        state: present
+        update_cache: yes
+      tags: docker
+
+    - name: AJOUT CLE GPG DE DOCKER
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+      tags: docker
+
+    - name: AJOUT DEPOT APT DE DOCKER
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable
+        state: present
+      tags: docker
+
+  tasks:
+    - name: INSTALL DOCKER
+      apt:
+        name: docker-ce
+        state: present
+        update_cache: yes
+      tags: docker
+
+    - name: INSTALL DOCKER COMPOSE V2
+      apt:
+        name: docker-compose-plugin
+        state: present
+      tags: docker
+
+    - name: DEMARRE DOCKER
+      ansible.builtin.systemd_service:
+        state: started
+        name: docker
+      tags: docker
+
+    - name: Ajouter domaine dans /etc/hosts
+      lineinfile:
+        path: /etc/hosts
+        line: "192.168.133.189 monsite.com www.monsite.com"
+        state: present
+
+    - name: Création de la structure du projet Docker
+      include_tasks: createD.yaml
+
+    - name: Lancer les conteneurs Docker
+      command: docker compose up -d
+      args:
+        chdir: /evaluation2_ansible
+

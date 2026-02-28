@@ -1,0 +1,133 @@
+- name: Creer structure projet Docker 
+  hosts: prod
+  become: true
+  vars_files:
+    - ./vars/secret-variables.yaml
+
+  pre_tasks:
+
+    - name: INSTALL DEPENDANCES DOCKER
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+        state: present
+        update_cache: yes
+      tags: docker
+
+    - name: AJOUT CLE GPG DE DOCKER
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+      tags: docker
+
+    - name: AJOUT DEPOT APT DE DOCKER
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable
+        state: present
+      tags: docker
+
+  tasks:
+    - name: INSTALL DOCKER
+      apt:
+        name: docker-ce
+        state: present
+        update_cache: yes
+      tags: docker
+
+    - name: INSTALL DOCKER COMPOSE V2
+      apt:
+        name: docker-compose-plugin
+        state: present
+      tags: docker
+
+    - name: DEMARRE DOCKER
+      ansible.builtin.systemd_service:
+        state: started
+        name: docker
+      tags: docker
+
+    - name: Ajouter domaine dans /etc/hosts
+      lineinfile:
+        path: /etc/hosts
+        line: "192.168.133.189 monsite.com www.monsite.com"
+        state: present
+
+    - name: Creer dossier principal
+      file:
+        path: /evaluation2_ansible
+        state: directory
+        mode: '0755'
+      tags: REP_FILES
+
+    - name: Creer dossier php
+      file:
+        path: /evaluation2_ansible/php
+        state: directory
+        mode: '0755'
+      tags: REP_FILES
+
+    - name: Creer dossier monsite
+      file:
+        path: /evaluation2_ansible/monsite
+        state: directory
+        mode: '0755'
+      tags: REP_FILES
+
+    - name: Creer dossier html
+      file:
+        path: /evaluation2_ansible/monsite/html
+        state: directory
+        mode: '0755'
+      tags: REP_FILES
+
+    - name: Creer dossier conf
+      file:
+        path: /evaluation2_ansible/monsite/conf
+        state: directory
+        mode: '0755'
+      tags: REP_FILES
+
+    - name: Copier le fichier docker-compose.yml
+      ansible.builtin.copy:
+        src: /home/deploy/codes/ansible/evaluation2_ansible/docker-compose.yml
+        dest: /evaluation2_ansible/docker-compose.yml
+        owner: deploy
+        group: deploy
+        mode: '0644'
+      tags: REP_FILES
+
+    - name: Copier le fichier default.conf
+      ansible.builtin.copy:
+        src: /home/deploy/codes/ansible/evaluation2_ansible/default.conf
+        dest: /evaluation2_ansible/monsite/conf/default.conf
+        owner: deploy
+        group: deploy
+        mode: '0644'
+      tags: REP_FILES
+
+    - name: Copier le fichier index.php
+      ansible.builtin.copy:
+        src: /home/deploy/codes/ansible/evaluation2_ansible/index.php
+        dest: /evaluation2_ansible/monsite/html/index.php
+        owner: deploy
+        group: deploy
+        mode: '0644'
+      tags: REP_FILES
+
+    - name: Copier le fichier Dockerfile
+      ansible.builtin.copy:
+        src: /home/deploy/codes/ansible/evaluation2_ansible/Dockerfile
+        dest: /evaluation2_ansible/php/Dockerfile
+        owner: deploy
+        group: deploy
+        mode: '0644'
+      tags: REP_FILES
+
+    - name: Lancer les conteneurs Docker
+      command: docker compose up -d
+      args:
+        chdir: /evaluation2_ansible
+

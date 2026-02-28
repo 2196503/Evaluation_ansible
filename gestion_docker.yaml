@@ -1,0 +1,24 @@
+- name: Gestion Docker
+  hosts: prod
+  become: true
+  vars_files:
+    - ./vars/secret-variables.yaml
+
+  tasks:
+
+    - name: Arrêter les services Docker Compose
+      community.docker.docker_compose_v2:
+        project_src: /evaluation2_ansible
+        state: stopped
+      register: stop_output
+      tags: stop 
+    
+    - name: Redémarrer les services Docker Compose
+      community.docker.docker_compose_v2:
+        project_src: /evaluation2_ansible
+        state: restarted
+      register: restart_output
+      tags: restart
+
+    
+
