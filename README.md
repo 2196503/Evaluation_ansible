@@ -186,4 +186,3 @@ ansible -i hosts.yaml -m ping prod
 <img width="975" height="601" alt="image" src="https://github.com/user-attachments/assets/f3f3a9ab-40d1-4fc5-bf54-5f2308b5b27c" />
 
 
-Ce projet illustre une chaîne complète : **journalisation**, **gestion des services Docker**, et **déploiement applicatif** entièrement automatisés avec Ansible.
