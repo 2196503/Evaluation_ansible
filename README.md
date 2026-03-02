@@ -33,7 +33,7 @@ Ce dépôt décrit le déploiement automatisé d’une infrastructure basée sur
 
 ## Fichiers et répertoires de la machine de gestion Ansible (machine de contrôle)
 ### Capture 2
-<img width="257" height="160" alt="image" src="https://github.com/user-attachments/assets/9105751e-34b8-4ab9-9e1b-13f06fb72ed2" />
+<img width="241" height="147" alt="image" src="https://github.com/user-attachments/assets/af502720-9734-46f5-8fa2-e1cceeda455a" />
 
 ---
 
