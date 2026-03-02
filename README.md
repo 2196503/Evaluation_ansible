@@ -93,7 +93,7 @@ ansible -i hosts.yaml -m ping prod
 ```
 
 ### Capture 7
-<img width="975" height="260" alt="image" src="https://github.com/user-attachments/assets/9c12f323-8ae0-4782-96ab-6905c77e285b" />
+<img width="480" height="74" alt="image" src="https://github.com/user-attachments/assets/9cee3a42-7034-4d8f-9ef7-54d7513e2476" />
 
 ---
 
